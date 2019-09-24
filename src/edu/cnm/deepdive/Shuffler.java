@@ -73,10 +73,10 @@ public class Shuffler {
     }
   }
 
-  public void shuffle(Object[] data) {
+  public <T> void shuffle(T[] data) {
     for (int dest = data.length - 1; dest > 0; dest--) {
       int source = rng.nextInt(dest + 1);
-      Object temp = data[dest];
+      T temp = data[dest];
       data[dest] = data[source];
       data[source] = temp;
     }
